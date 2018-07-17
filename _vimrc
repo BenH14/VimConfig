@@ -27,21 +27,23 @@ set hlsearch
 set visualbell
 set noerrorbells
 
+:highlight BadWhiteSpace ctermfg=16 ctermbg=253 guifg=#000000 guibg=#F8F8F0
+
 "--Indentation
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhiteSpace /\s\+$/
+"--au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhiteSpace /\s\+$/
 "Python
 au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
     \ set fileformat=unix
 "Web
 au BufNewFile,BufRead *.js, *.html, *.css
-    \ set tabstop=2
-    \ set softtabstop=2
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
     \ set shiftwidth=2
 
 "-- Code Folding
